@@ -28,6 +28,7 @@ if __name__ == "__main__":
     observation, infos = env.reset(seed=42, return_info=True)
 
     # Resetting the position of the relevant joints
+    # each number in the qpos_reset array represent the degree (in rad) each joint will be reset to in the beginning of the simulation
     qpos_reset = np.array([0, 0.13, 0, 0, 0.13, 0, 0, -0.13, 0, 0, 0, 0, 0, 0, 0, 0])
     env.set_reset(qpos_reset)
 
